@@ -1,0 +1,21 @@
+version: '3'
+services:
+  todos-api:
+    build: "./docker/go-develop"
+    container_name: "todos-api"
+    environment:
+      GO_WORK_DIR: "${GO_PROJECT_DIR}/todos-api"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ".:${GO_PROJECT_DIR}"
+
+  # another-app:
+  #   container_name: "another-app"
+  #   build: "./docker/go-develop"
+  #   volumes:
+  #     - ".:${GO_PROJECT_DIR}"
+  #   ports:
+  #     - "8181:8181"
+  #   environment:
+  #     GO_WORK_DIR: "${GO_PROJECT_DIR}/another-app"
