@@ -1,3 +1,16 @@
 # TODO(s) API
 
-Just a small TODO-list API implemented in Go to play around with the language.
+TODO-list API.
+
+Features:
+
+- [x] Using the `chi` framework
+- [ ] CRUD on TODO items
+- [ ] CRUD on Users and their relations to Items
+- [ ] Testing
+
+
+Maybe in the future:
+
+- [ ] Users support
+- [ ] Some kind of authentication/authorization

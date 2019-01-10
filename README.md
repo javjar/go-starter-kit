@@ -8,5 +8,11 @@ Setting up my own Go starter kit featuring:
 
 Plan to add:
 
+- [ ] Go Modules support
 - [ ] Some more examples (AKA: starter kits)
 - [ ] Integration with other(s) e.g: Prometheus, Redis, etc.
+
+Examples:
+
+- `hello-world` HTTP Server hello world
+- `todos-api` TODOs API

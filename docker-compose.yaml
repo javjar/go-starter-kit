@@ -1,21 +1,22 @@
 version: '3'
 services:
+  hello-world:
+    build: "./docker/go-develop"
+    container_name: "hello-world"
+    environment:
+      GO_WORK_DIR: "${GO_PROJECT_DIR}/hello-world"
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ".:${GO_PROJECT_DIR}"
   todos-api:
     build: "./docker/go-develop"
     container_name: "todos-api"
     environment:
       GO_WORK_DIR: "${GO_PROJECT_DIR}/todos-api"
+      PORT: 8081
     ports:
-      - "8080:8080"
+      - "8081:8081"
     volumes:
       - ".:${GO_PROJECT_DIR}"
-
-  # another-app:
-  #   container_name: "another-app"
-  #   build: "./docker/go-develop"
-  #   volumes:
-  #     - ".:${GO_PROJECT_DIR}"
-  #   ports:
-  #     - "8181:8181"
-  #   environment:
-  #     GO_WORK_DIR: "${GO_PROJECT_DIR}/another-app"
