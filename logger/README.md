@@ -1,3 +1,3 @@
-# TODO(s) API
+# Logger
 
-Hello world, the web server.
+Just a dummy app that logs messages.
