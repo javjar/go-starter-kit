@@ -1,6 +1,6 @@
 ARG GO_VERSION=1.11
 
-FROM golang:${GO_VERSION}}-alpine
+FROM golang:${GO_VERSION}-alpine
 
 COPY root /
 
